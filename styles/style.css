@@ -1,0 +1,116 @@
+@font-face {
+    src: url(../assets/Poppins/Poppins-Regular.ttf);
+     font-family: Poppins;
+ }
+ @font-face {
+    src: url(../assets/Poppins/Poppins-Bold.ttf);
+     font-family: PoppinsBold;
+ }
+
+.bodyday{
+    background-image: url(../assets/1540016.jpg);
+}
+
+.bodyDark{
+    background-image: url(../assets/Moonlight\ Sonata.jpeg);
+}
+
+.TxtBold{
+    font-family: PoppinsBold;
+    color: white;
+}
+.TxtBoldBtn{
+    font-family: PoppinsBold;
+    color: white;
+    padding: 7px;
+}
+
+.card-title{
+    font-family: PoppinsBold;
+    text-align: center;
+}
+.card-title1{
+    font-family: PoppinsBold;
+    text-align: center;
+    font-size: 30px;
+}
+.card-title2{
+    font-family: PoppinsBold;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.card-text1{
+    font-family: Poppins;
+    text-align: center;
+}
+.card-text2{
+    font-family: PoppinsBold;
+    text-align: center;
+    font-size: 60px;
+}
+.card-text3{
+    padding-top: 40px;
+    font-family: PoppinsBold;
+    text-align: center;
+    font-size: 60px;
+}
+
+
+.card{
+    border-radius: 30px;
+    opacity: 0.8;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, .9);
+}
+
+.textTime{
+    font-family: PoppinsBold;
+    text-align: center;
+    font-size: 80px;
+}
+
+.buttonFav{
+    background-color: #444444;
+    border-radius: 40px;
+    width: 182px;
+    height: 42px;
+    color: white;
+}
+
+
+.SearchBar{
+    background-color: #444444;
+    border-radius: 15px;
+    height: 42px;
+    width: 460px;
+}
+
+input {
+    -webkit-appearance: none;
+    position: relative;
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: #D9D9D9;
+    outline: none;
+    cursor: pointer;
+}
+
+input::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: #444444;
+    transition: left .3s;
+}
+
+
+input:checked::after {
+    left: 80%;
+}
