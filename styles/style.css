@@ -15,6 +15,18 @@
     background-image: url(../assets/Moonlight\ Sonata.jpeg);
 }
 
+.SearchBar {
+    width: 66%;
+    padding: 1% 12%;
+    margin: 1% 1%;
+    background-image: url(../assets/searchicon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: 0;
+    background-position: 12px;
+    background-size: 16px;
+  }
+
 .TxtBold{
     font-family: PoppinsBold;
     color: white;
@@ -28,16 +40,28 @@
 .card-title{
     font-family: PoppinsBold;
     text-align: center;
+    opacity: 1;
 }
 .card-title1{
     font-family: PoppinsBold;
     text-align: center;
     font-size: 30px;
+    opacity: 1;
 }
 .card-title2{
+    padding-top: 20px;
     font-family: PoppinsBold;
     text-align: center;
     font-size: 16px;
+    opacity: 1;
+}
+
+.icon{
+   opacity: 1;
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -46,15 +70,16 @@
     text-align: center;
 }
 .card-text2{
+    padding-top: 20px;
     font-family: PoppinsBold;
     text-align: center;
-    font-size: 60px;
+    font-size: 36px;
 }
 .card-text3{
     padding-top: 40px;
     font-family: PoppinsBold;
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 
@@ -84,7 +109,10 @@
     border-radius: 15px;
     height: 42px;
     width: 460px;
+    font-size: 18px;
+    color: white; 
 }
+
 
 input {
     -webkit-appearance: none;
@@ -93,7 +121,6 @@ input {
     height: 30px;
     border-radius: 25px;
     background-color: #D9D9D9;
-    outline: none;
     cursor: pointer;
 }
 

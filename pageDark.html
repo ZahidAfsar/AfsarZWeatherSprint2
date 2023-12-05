@@ -13,13 +13,15 @@
     <div class="container-fluid">
    <div class="row">
      <div class="col-6">
-       <input type="checkbox">
-       <p class="TxtBold" >Light Mode</p>
+       <input type="checkbox" id="darkModeCheckbox" checked>
+       <p class="TxtBold" >Dark Mode</p>
      </div>
      <div class="col-2">
-       <button class="buttonFav">
-         <p class="TxtBoldBtn">Favorites</p>
-       </button>
+      <a href="./favpagedark.html">
+        <button class="buttonFav">
+          <p class="TxtBoldBtn">Favorites</p>
+        </button>
+        </a>
      </div>
      <div class="col-3">
        <input  class="SearchBar" type="text" placeholder="search">
@@ -31,49 +33,92 @@
  <br>
  <br>
  
-   <div class="container">
-     <div class="row">
-       <div class="row row-cols-md-2 g-4">
-         <div class="col">
-           <div class="card h-100">
-             <div class="card-body">
-               <h5 class="card-title">Stockton</h5>
-               <p class="card-text">12:03</p>
-               <p class="card-text">Friday, Dec 31</p>
-             </div>
-           </div>
-         </div>
-         <div class="col">
-           <div class="card h-100">
-             <div class="card-body">
-               <h5 class="card-title">Card title</h5>
-               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-             </div>
-           </div>
-         </div>       
-       </div>
-   </div>
-   </div>
- <br>
- <br>
- <br>
- <br>
-   <div class="container">
-     <div class="row">
-       <div class="card">
-         <div class="card-body">
-           <h5 class="card-title">Special title treatment</h5>
-           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-         </div>
-       </div>
-     </div>
-   </div>
  
+ <div class="container">
+  <div class="row">
+    <div class="row row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title card-title1 ">Stockton</h5>
+            <p class="card-text textTime">12:03</p>
+            <p class="card-text card-text1">Friday, 31 Dec</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Currently</h5>
+            <div class="row">
+            <div class="col">
+              <p class="card-text card-text3" id="currentTemperature">82°F</p>
+            </div>
+            <div class="col">
+              <img class="icon"  src="./assets/contrast.png" alt="iconSun" height="150px" >
+              <p class="card-text card-title2">Sunny</p>
+            </div>
+            <div class="col card-text2">
+              <p id="maxTemperature">
+              H 95° 
+            </p>
+              <p id="minTemperature">
+                L 63°
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>       
+    </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title card-title1">Weekly Forecast</h5>
+        <div class="row">
+          <div class="col card-title2">Sat
+            <p id="maxTemperature" >H:90</p>
+            <p id="minTemperature" >L:20</p>
+          </div>
+          <div class="col card-title2">Sun
+            <p id="currentTemperatureMax" >H:90</p>
+            <p id="currentTemperatureMin" >L:20</p>
+          </div>
+          <div class="col card-title2">Mon
+            <p id="TemperatureMax" >H:90</p>
+            <p id="TemperatureMin" >L:20</p>
+          </div>
+          <div class="col card-title2">Tue
+            <p id="TemperatureMax2" >H:90</p>
+            <p id="TemperatureMin2" >L:20</p>
+          </div>
+          <div class="col card-title2">Wed
+            <p id="TemperatureMax3" >H:90</p>
+            <p id="TemperatureMin3" >L:20</p>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+  
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script type="module" src="./scripts/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script type="module" src="./scripts/app.js"></script>
+  <script type="module" src="./scripts/environment.js"></script>
+</body>
 </html>

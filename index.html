@@ -12,7 +12,7 @@
    <div class="container-fluid">
   <div class="row">
     <div class="col-6">
-      <input type="checkbox">
+      <input type="checkbox" id="darkModeCheckbox">
       <p class="TxtBold" >Light Mode</p>
     </div>
     <div class="col-2">
@@ -50,16 +50,17 @@
               <h5 class="card-title">Currently</h5>
               <div class="row">
               <div class="col">
-                <p class="card-text card-text3">82°F</p>
+                <p class="card-text card-text3" id="currentTemperature">82°F</p>
               </div>
               <div class="col">
+                <img class="icon"  src="./assets/contrast.png" alt="iconSun" height="150px" >
                 <p class="card-text card-title2">Sunny</p>
               </div>
               <div class="col card-text2">
-                <p>
+                <p id="maxTemperature">
                 H 95° 
               </p>
-                <p>
+                <p id="minTemperature">
                   L 63°
                 </p>
               </div>
@@ -80,11 +81,26 @@
         <div class="card-body">
           <h5 class="card-title card-title1">Weekly Forecast</h5>
           <div class="row">
-            <div class="col">Sat</div>
-            <div class="col">Sun</div>
-            <div class="col">Mon</div>
-            <div class="col">Tue</div>
-            <div class="col">Wed</div>
+            <div class="col card-title2">Sat
+              <p id="maxTemperature" >H:90</p>
+              <p id="minTemperature" >L:20</p>
+            </div>
+            <div class="col card-title2">Sun
+              <p id="currentTemperatureMax" >H:90</p>
+              <p id="currentTemperatureMin" >L:20</p>
+            </div>
+            <div class="col card-title2">Mon
+              <p id="TemperatureMax" >H:90</p>
+              <p id="TemperatureMin" >L:20</p>
+            </div>
+            <div class="col card-title2">Tue
+              <p id="TemperatureMax2" >H:90</p>
+              <p id="TemperatureMin2" >L:20</p>
+            </div>
+            <div class="col card-title2">Wed
+              <p id="TemperatureMax3" >H:90</p>
+              <p id="TemperatureMin3" >L:20</p>
+            </div>
         </div>
         </div>
       </div>
