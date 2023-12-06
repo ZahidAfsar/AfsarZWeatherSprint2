@@ -15,7 +15,7 @@ async function ApiCall(){
     console.log('Max Temperature:', maxTemperature);
     console.log('Min Temperature:', minTemperature);
 
-    document.getElementById('currentTemperature').innerText = `${currentTemperature} °F`;
+    document.getElementById('currentTemperature').textContent = `${currentTemperature} °F`;
     document.getElementById('maxTemperature').innerText = `H: ${maxTemperature}°F`;
     document.getElementById('minTemperature').innerText = `L: ${minTemperature}°F`;
 }
