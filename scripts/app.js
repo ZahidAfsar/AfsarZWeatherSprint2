@@ -1,12 +1,14 @@
 import {apiKey} from "./environment.js";
+import { cityName } from "./environment.js";
 
-
-async function ApiCall(){
-
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=37.9577&lon=-121.2908&appid=${apiKey}&units=imperial`);
-
+async function ApiCall(city) {
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`);
     const data = await promise.json();
 
+    document.getElementById('cityName').innerText = city;
+
+
+    console.log('------Current Weather------');
     const currentTemperature = data.main.temp;
     const maxTemperature = data.main.temp_max;
     const minTemperature = data.main.temp_min;
@@ -18,6 +20,11 @@ async function ApiCall(){
     document.getElementById('currentTemperature').textContent = `${currentTemperature} °F`;
     document.getElementById('maxTemperature').innerText = `H: ${maxTemperature}°F`;
     document.getElementById('minTemperature').innerText = `L: ${minTemperature}°F`;
+}
+
+window.onload = function () {
+    ApiCall('Los Angeles')
+
 }
 
 async function ApiCall2(){
@@ -70,20 +77,59 @@ async function ApiCall2(){
 
 }
 
+async function SearchCall(){
+    const searchInput = document.getElementById('SearchBar').value;
+    await ApiCall(searchInput);
+}
+
+async function timeDate(){
+
+    const promise = await  fetch();
+
+    const data = await promise.json();
+
+    console.log(data)
+}
 
 
-ApiCall();
+
+ApiCall(cityName);
 ApiCall2();
+SearchCall();
+timeDate();
 
-const darkModeCheckbox = document.getElementById('darkModeCheckbox');
 
-darkModeCheckbox.addEventListener('change', function () {
-    let isDarkMode = darkModeCheckbox.checked;
+let SearchBar = document.getElementById("SearchBar");
+let SubmitBtn = document.getElementById("SubmitBtn");
 
-    if (isDarkMode) {
-        console.log(isDarkMode);
-        window.location.href = '../pageDark.html';
-    } else {
-        window.location.href = '../index.html';
-    }
+SearchBar.addEventListener('click', function(e){
+    console.log(SearchBar.value);
 });
+
+
+SubmitBtn.addEventListener('click', function(e){
+    SearchCall();
+});
+
+
+// THIS CODE WOULDNT WORK IN JS BUT WORKS IN HTML FOR SOME REASON????
+// JOHN HELPED ME AND SAID I COULD USE THE HTML ONE
+
+// const darkModeCheckbox = document.getElementById('darkModeCheckbox');
+// const lightModeCheckbox = document.getElementById('lightModeCheckBox');
+
+// darkModeCheckbox.addEventListener('click', function (e) {
+//     let isDarkMode = darkModeCheckbox.checked;
+//     if (isDarkMode) {
+//         console.log(isDarkMode);
+//         window.location.href = '../pages/pageDark.html';
+//     }
+// });
+
+// lightModeCheckbox.addEventListener('click', function (e) {
+//     let isDarkMode = lightModeCheckbox.checked;
+//     if (isDarkMode) {
+//         console.log(isDarkMode);
+//         window.location.href = '../index.html';
+//     }
+// });
