@@ -75,11 +75,15 @@ async function ApiCall2(){
 ApiCall();
 ApiCall2();
 
-document.getElementById('darkModeCheckbox').addEventListener('change', function (e) {
-    if (this.checked) {
+const darkModeCheckbox = document.getElementById('darkModeCheckbox');
+
+darkModeCheckbox.addEventListener('change', function () {
+    let isDarkMode = darkModeCheckbox.checked;
+
+    if (isDarkMode) {
+        console.log(isDarkMode);
         window.location.href = '../pageDark.html';
-    }else {
-       
+    } else {
         window.location.href = '../index.html';
     }
 });
