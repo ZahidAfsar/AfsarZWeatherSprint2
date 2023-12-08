@@ -23,3 +23,9 @@
 
 // Plans for (12/7/23)
 //What I plan for tommorrow is to make the favorites page and have it save to local storage. I also plan to compelete the search bar. I may also work on the Date and Time api fetch and have it display in the html.
+
+//(12/7/23)
+// What I did was start by fixing the searh bar. I also then started to work on display the date and time and made it display but i am still trying to figure out how to change it based on timezone. Lastly I worked on local storage but still trying to make it display.
+
+// Plans for (12/8/23)
+// I plan to finish up and get the icons to change and then get a peer review
