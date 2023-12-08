@@ -3,7 +3,7 @@
 // 12-4-23
 //weather sprint 2
 //Built out the weather app from the figma
-//Peer reviewed by :
+//Peer reviewed by : Jayvon Khuth
 
 // (12/4/23)
 // What I did today: Made the basic layout of the figma and got the favorite page to link. Also got to fetch the data from the api. Console logged the data that I need for the current day and high and low temp
@@ -29,3 +29,6 @@
 
 // Plans for (12/8/23)
 // I plan to finish up and get the icons to change and then get a peer review
+
+
+Peer Review: Upon a first glance, the website looks very clean and good. It looks like he put in a lot of effort into making the weather sprint. Comparing it to the original figma design, it looks very similar, which is good. Looking at the functionality, mostly everything works, however I did a bug. For example when you searched a location that doesn't exist, the weather data stays the same but the location name changes to what you typed in. Also in the website the hearts are already filled in which makes it seem like its already in my favorited list, I recommend that the hearts aren't automatically filled. Besides that, I liked how his night and day mode functioned perfectly and that he had one of those pop ups whenever you added a location to your favorite's list. Overall, Good Job! keep it up.
