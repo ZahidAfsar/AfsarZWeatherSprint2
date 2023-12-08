@@ -27,8 +27,23 @@
 //(12/7/23)
 // What I did was start by fixing the searh bar. I also then started to work on display the date and time and made it display but i am still trying to figure out how to change it based on timezone. Lastly I worked on local storage but still trying to make it display.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Plans for (12/8/23)
 // I plan to finish up and get the icons to change and then get a peer review
-
-
-Peer Review: Upon a first glance, the website looks very clean and good. It looks like he put in a lot of effort into making the weather sprint. Comparing it to the original figma design, it looks very similar, which is good. Looking at the functionality, mostly everything works, however I did a bug. For example when you searched a location that doesn't exist, the weather data stays the same but the location name changes to what you typed in. Also in the website the hearts are already filled in which makes it seem like its already in my favorited list, I recommend that the hearts aren't automatically filled. Besides that, I liked how his night and day mode functioned perfectly and that he had one of those pop ups whenever you added a location to your favorite's list. Overall, Good Job! keep it up.
