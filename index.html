@@ -43,13 +43,13 @@
               <div class="col-11"><h5 class="card-title card-title1 " id="cityName"></h5></h5>
               </div>
               <div class="col-1">
-               <button class="FavBtn">
+               <button class="FavBtn" id="addToFavoritesBtn" id="addToFavoritesIcon">
                 <i class="ph-fill ph-heart" style="color: red;"></i>
               </button>
               </div>
               </div>
-              <p class="card-text textTime">12:03</p>
-              <p class="card-text card-text1">Friday, 31 Dec</p>
+              <p class="card-text textTime" id="textTime" >12:03</p>
+              <p class="card-text card-text1" id="dateTime" >Friday, 31 Dec</p>
             </div>
           </div>
         </div>
@@ -90,25 +90,25 @@
         <div class="card-body">
           <h5 class="card-title card-title1">Weekly Forecast</h5>
           <div class="row">
-            <div class="col card-title2">Sat
-              <p id="maxTemperature" >H:90</p>
-              <p id="minTemperature" >L:20</p>
+            <div class="col card-title2" id="day0">Sat
+              <p id="TemperatureMax0" >H:90</p>
+              <p id="TemperatureMin0" >L:20</p>
             </div>
-            <div class="col card-title2">Sun
-              <p id="currentTemperatureMax" >H:90</p>
-              <p id="currentTemperatureMin" >L:20</p>
+            <div class="col card-title2" id="day1" >Sun
+              <p id="TemperatureMax1" >H:90</p>
+              <p id="TemperatureMin1" >L:20</p>
             </div>
-            <div class="col card-title2">Mon
-              <p id="TemperatureMax" >H:90</p>
-              <p id="TemperatureMin" >L:20</p>
-            </div>
-            <div class="col card-title2">Tue
+            <div class="col card-title2" id="day2" >Mon
               <p id="TemperatureMax2" >H:90</p>
               <p id="TemperatureMin2" >L:20</p>
             </div>
-            <div class="col card-title2">Wed
+            <div class="col card-title2" id="day3" >Tue
               <p id="TemperatureMax3" >H:90</p>
               <p id="TemperatureMin3" >L:20</p>
+            </div>
+            <div class="col card-title2" id="day4" >Wed
+              <p id="TemperatureMax4" >H:90</p>
+              <p id="TemperatureMin4" >L:20</p>
             </div>
         </div>
         </div>
