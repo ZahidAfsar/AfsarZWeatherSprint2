@@ -1,7 +1,9 @@
 import { apiKey } from "./environment.js";
 import { cityName } from "./environment.js";
+import {addToFavorites, removeFromFavorites, updateFavoritesPage } from './favorites.js';
 
-async function CurrentWeatherApi(city) {
+
+export async function CurrentWeatherApi(city) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`);
         const data = await response.json();
@@ -29,7 +31,7 @@ async function CurrentWeatherApi(city) {
 }
 
 
-async function fiveDayApi(lat, lon) {
+export async function fiveDayApi(lat, lon) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`);
         const forecastData = await response.json();
@@ -78,13 +80,18 @@ window.onload = function () {
     });
 
     addToFavoritesBtn.addEventListener('click', function (e) {
-        const searchInput = document.getElementById('cityName').innerText; 
+        const searchInput = document.getElementById('cityName').innerText;
         if (searchInput.trim() !== '') {
             addToFavorites(searchInput);
-            alert('added to favorites');
-            updateFavoritesPageNew(JSON.parse(localStorage.getItem('favorites')) || []);
+            alert('Added to favorites');
+            updateFavoritesPage();
         }
     });
+
+   
+
+    const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    updateFavoritesPage(savedFavorites);
 
     CurrentWeatherApi('Los Angeles');
     fiveDayApi(34.0522, -118.2437); 
@@ -118,25 +125,6 @@ async function getLatLonForCity(city) {
     }
 }
 
-
-
-function addToFavorites(city) {
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-    if (!favorites.includes(city)) {
-        favorites.push(city);
-        localStorage.setItem('favorites', JSON.stringify(favorites));
-        updateFavoritesPage(favorites);
-        console.log(`Added ${city} to favorites.`);
-    } else {
-        console.log(`${city} is already in favorites.`);
-    }
-}
-
-function updateFavoritesPage(favorites) {
-    console.log('Updated favorites:', favorites);
-}
-
 function updateDateTime() {
     const currentDate = new Date();
 
@@ -148,6 +136,8 @@ function updateDateTime() {
     document.getElementById('textTime').textContent = formattedTime;
     document.getElementById('dateTime').textContent = formattedDate;
 }
+
+
 
 
 
